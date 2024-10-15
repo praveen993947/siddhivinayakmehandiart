@@ -203,4 +203,20 @@
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popper
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Script to auto-call the number on page load -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            setTimeout(function () {
+                var callButton = document.getElementById('callButton');
+                if (callButton) {
+                    window.location.href = callButton.href;
+                }
+            }, 1000); // Delay to ensure page is fully loaded before triggering call
+        });
+    </script>
+</body>
+
+</html>
